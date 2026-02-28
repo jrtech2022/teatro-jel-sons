@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-theater-bg: #0a0a0b;
+  --color-track-1: #3b82f6; /* Blue */
+  --color-track-2: #ef4444; /* Red */
+  --color-track-3: #10b981; /* Emerald */
+}
+
+@layer base {
+  body {
+    @apply bg-theater-bg text-zinc-100 font-sans antialiased overflow-y-auto sm:overflow-hidden;
+  }
+}
+
+/* Custom range input styling for a more "hardware" feel */
+input[type='range'] {
+  @apply h-1.5 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-zinc-100;
+}
+
+.glass-panel {
+  @apply bg-zinc-900/50 border border-white/10 rounded-2xl backdrop-blur-sm;
+}
+
+.btn-action {
+  @apply flex items-center justify-center transition-all active:scale-95 disabled:opacity-30 disabled:pointer-events-none;
+}
+
+.led-indicator {
+  @apply w-2 h-2 rounded-full transition-all duration-300;
+}
+
+.led-on {
+  @apply shadow-[0_0_8px_rgba(255,255,255,0.5)] bg-white;
+}
+
+.led-off {
+  @apply bg-zinc-700;
+}

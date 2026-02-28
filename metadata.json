@@ -1,0 +1,5 @@
+{
+  "name": "Sistema de Disparo de Áudio Teatral",
+  "description": "Painel de controle de áudio profissional para peças de teatro com crossfades, controles master e reprodução de baixa latência.",
+  "requestFramePermissions": []
+}
