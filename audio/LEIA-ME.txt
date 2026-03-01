@@ -1,0 +1,2 @@
+# Pasta para arquivos de áudio (.mp3, .wav)
+# Coloque os arquivos aqui e referencie no config.json

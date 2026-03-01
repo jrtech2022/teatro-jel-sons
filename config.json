@@ -1,0 +1,25 @@
+{
+  "tracks": [
+    {
+      "id": "track-1",
+      "name": "Trilha Sonora + Narração",
+      "fileName": "Trilha Sonora.mp3",
+      "path": "audio/Trilha Sonora.mp3",
+      "color": "#3b82f6"
+    },
+    {
+      "id": "track-2",
+      "name": "Fundo Musical (Declamação)",
+      "fileName": "Fundo Musical.mp3",
+      "path": "audio/Fundo Musical.mp3",
+      "color": "#ef4444"
+    },
+    {
+      "id": "track-3",
+      "name": "Playback (Apocalipse - Damares)",
+      "fileName": "Playback.mp3",
+      "path": "audio/Playback.mp3",
+      "color": "#10b981"
+    }
+  ]
+}

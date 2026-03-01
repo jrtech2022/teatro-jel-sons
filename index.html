@@ -1,17 +1,83 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta name="theme-color" content="#0a0a0b" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <title>ÁUDIO TEATRAL v1.0</title>
-    <script type="text/javascript" nonce="730b4b01ff1c41b08cf48b3bb7d" src="//local.adguard.org?ts=1772265584372&amp;type=content-script&amp;dmn=aistudio.google.com&amp;url=https%3A%2F%2Faistudio.google.com%2F_%2Fupload%2Fd24ba7db-ecd9-4ae0-835e-8efc6ab8f7ca%2Ffile%2F632d8e4091d6655927445c19ff4138f5f3e22080cb3e5b5c3e4bca16f6cbdf8e&amp;app=chrome.exe&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1&amp;stealth=1&amp;st-dnt"></script><script type="text/javascript" nonce="730b4b01ff1c41b08cf48b3bb7d" src="//local.adguard.org?ts=1772265584372&amp;name=AdGuard%20Extra&amp;type=user-script"></script><link rel="manifest" href="/manifest.json" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+<!DOCTYPE html>
+<html lang="pt-BR">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#0a0a0b">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>ÁUDIO TEATRAL v1.0</title>
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div id="app-container" class="app-container">
+    <header class="app-header">
+      <div class="header-left">
+        <div class="header-subtitle">
+          <i data-lucide="zap" class="icon-zap"></i>
+          <span>Peça: O Juízo Final</span>
+        </div>
+        <h1 class="header-title">ÁUDIO TEATRAL <span class="header-version">v1.0</span></h1>
+      </div>
+      <div class="header-right">
+        <button id="btn-fullscreen" class="icon-btn">
+          <i data-lucide="maximize-2" id="icon-maximize"></i>
+          <i data-lucide="minimize-2" id="icon-minimize" style="display: none;"></i>
+        </button>
+        <div class="status-container">
+          <p class="status-label">Status do Sistema</p>
+          <p id="system-status" class="status-value text-amber">CLIQUE PARA INICIAR</p>
+        </div>
+      </div>
+    </header>
+
+    <main id="tracks-container" class="tracks-grid">
+      <!-- Tracks serão injetados via JS -->
+    </main>
+
+    <footer class="app-footer">
+      <div class="master-panel">
+        <div class="master-header">
+          <div class="master-title">
+            <i data-lucide="settings-2"></i>
+            <span>Console Master</span>
+          </div>
+          <span id="master-volume-label" class="master-value">100%</span>
+        </div>
+        <div class="master-controls">
+          <i data-lucide="volume-x"></i>
+          <input type="range" id="master-volume" min="0" max="1.5" step="0.01" value="1">
+          <i data-lucide="volume-2"></i>
+        </div>
+      </div>
+
+      <div class="global-actions">
+        <button id="btn-pause-all" class="btn-action btn-global-pause">
+          <i data-lucide="pause"></i>
+          <span>PAUSAR TUDO</span>
+        </button>
+        <button id="btn-stop-all" class="btn-action btn-global-stop">
+          <i data-lucide="square"></i>
+          <span>PARAR TUDO</span>
+        </button>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
